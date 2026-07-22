@@ -442,8 +442,7 @@
           .order('created_at', { ascending: true });
         if (error) throw error;
         const rows = data || [];
-        alert(rows.length ? rows.map(r => r.response.toUpperCase() + ' — ' + new Date(r.created_at).toLocaleString('pt-BR')).join('
-') : 'sem respostas ainda');
+        alert(rows.length ? rows.map(r => r.response.toUpperCase() + ' — ' + new Date(r.created_at).toLocaleString('pt-BR')).join('\\n') : 'sem respostas ainda');
       } catch (err) {
         alert('erro ao ler respostas');
       }
